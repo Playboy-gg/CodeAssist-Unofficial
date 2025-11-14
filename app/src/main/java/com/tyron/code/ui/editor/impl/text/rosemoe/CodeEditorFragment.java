@@ -299,7 +299,7 @@ public class CodeEditorFragment extends Fragment
     editor.setHighlightCurrentBlock(true);
     editor.setEdgeEffectColor(Color.TRANSPARENT);
     editor.openFile(mCurrentFile);
-    editor.getComponent(Magnifier.class).setWithinEditorForcibly(true);
+    //editor.getComponent(Magnifier.class).setWithinEditorForcibly(true);
   //  editor.replaceComponent(CodeAssistCompletionAdapter.class,new CodeAssistCompletionAdapter());
     editor.setImportantForAutofill(View.IMPORTANT_FOR_AUTOFILL_NO);
     editor.setInputType(
