@@ -60,7 +60,7 @@ public class KotlinLanguage extends EmptyTextMateLanguage implements Language {
         public TextRange formatAsync(@NonNull Content text, @NonNull TextRange cursorRange) {
              String formatted;
         try {
-            formatted = new com.facebook.ktfmt.format.Formatter()
+            formatted = com.facebook.ktfmt.format.Formatter()
                     .format(text.toString(),false);
         } catch (Exception e) {
             formatted = text.toString(); // fallback
