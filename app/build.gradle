@@ -164,6 +164,8 @@ dependencies {
 
     implementation 'androidx.preference:preference:1.2.1'
     implementation 'com.github.TutorialsAndroid:crashx:6.0.19'
+
+	implementation 'androidx.documentfile:documentfile:1.1.0'
     
 	//git
 	    implementation 'org.slf4j:slf4j-api:2.0.16'
