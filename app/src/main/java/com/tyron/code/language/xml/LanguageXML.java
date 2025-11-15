@@ -56,7 +56,6 @@ public class LanguageXML extends EmptyTextMateLanguage implements Language {
         @Nullable
         @Override
         public TextRange formatAsync(@NonNull Content text, @NonNull TextRange cursorRange) {
-            String formatted = null;
           XmlFormatPreferences preferences = XmlFormatPreferences.defaults();
     File file = mEditor.getCurrentFile();
     CharSequence formatted = null;
