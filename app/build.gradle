@@ -140,9 +140,9 @@ dependencies {
     // about
     implementation 'com.github.daniel-stoneuk:material-about-library:3.1.2'
 
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-	implementation 'androidx.core:core:1.13.1'
-    implementation 'com.google.android.material:material:1.12.0'  
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+	implementation 'androidx.core:core:1.17.0'
+    implementation 'com.google.android.material:material:1.13.0'  
     implementation 'androidx.constraintlayout:constraintlayout:2.2.0-alpha14'
     implementation 'androidx.viewpager2:viewpager2:1.1.0'
     implementation 'androidx.viewpager:viewpager:1.0.0'
@@ -152,9 +152,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.8.4'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.4'
     implementation 'androidx.lifecycle:lifecycle-livedata:2.8.4'
-    implementation 'androidx.fragment:fragment:1.8.2'
+    implementation 'androidx.fragment:fragment:1.8.9'
     implementation 'androidx.coordinatorlayout:coordinatorlayout:1.2.0'
-    implementation 'androidx.activity:activity:1.9.1'
+    implementation 'androidx.activity:activity:1.11.0'
     implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
     implementation 'com.github.angads25:filepicker:1.1.1'
 
@@ -170,7 +170,7 @@ dependencies {
 	    implementation 'com.blankj:utilcodex:1.31.1'
      
      //for CodeAssist
-     implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.0.20'
+     implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.2.0'
 	
     //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 
