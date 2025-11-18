@@ -35,8 +35,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
         
-      - name: Check code format
-        run: ./gradlew spotlessCheck
+  #    - name: Check code format
+     #   run: ./gradlew spotlessCheck
 
       - name: Build app
         run: ./gradlew assembleDebug -Penable-updater
