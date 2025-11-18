@@ -1,5 +1,8 @@
 name: Android CI Buid Apk Debug
 
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
 
