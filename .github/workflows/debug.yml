@@ -1,4 +1,6 @@
 name: Android CI Debug
+permissions:
+  contents: read
 
 on:
   #push:
