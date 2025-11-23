@@ -5,7 +5,7 @@ apply plugin: 'com.diffplug.spotless'
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
-	namespace rootProject.ext.applicationId 
+	namespace = rootProject.ext.applicationId 
 	
 	spotless {
 		java {
