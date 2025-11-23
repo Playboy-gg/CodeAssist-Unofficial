@@ -53,19 +53,20 @@ android {
     
     buildTypes {
         release {
-            signingConfig signingConfigs.debug
+            signingConfig = signingConfigs.debug
             minifyEnabled false
-            shrinkResources false
+            shrinkResources = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            signingConfig signingConfigs.debug
+            signingConfig =
+signingConfigs.debug
         }
     }
 	
     buildFeatures {
-        viewBinding true        
-        buildConfig true	        
+        viewBinding = true        
+        buildConfig = true	        
     }
 	
     packagingOptions {
