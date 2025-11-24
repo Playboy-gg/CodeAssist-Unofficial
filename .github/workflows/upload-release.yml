@@ -19,6 +19,8 @@ jobs:
         distribution: temurin
     - name: Make Gradle executable
       run: chmod +x ./gradlew
+    - name: Run Spotless
+      run: ./gradlew :app:spotlessApply
     - name: Build with Gradle
       run: ./gradlew build
     - name: Build Debug APK
