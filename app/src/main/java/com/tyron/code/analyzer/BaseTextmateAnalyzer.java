@@ -21,7 +21,7 @@
  *     Please contact Rosemoe by email 2073412493@qq.com if you need
  *     additional information or have any questions
  */
-package com.tyron.code.analyzer;
+package io.github.rosemoe.sora.langs.textmate;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -41,6 +41,7 @@ import org.eclipse.tm4e.core.internal.theme.Theme;
 import org.eclipse.tm4e.languageconfiguration.internal.model.LanguageConfiguration;
 
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +62,6 @@ import io.github.rosemoe.sora.langs.textmate.utils.StringUtils;
 import io.github.rosemoe.sora.text.Content;
 import io.github.rosemoe.sora.text.ContentLine;
 import io.github.rosemoe.sora.text.ContentReference;
-import io.github.rosemoe.sora.util.ArrayList;
 import io.github.rosemoe.sora.util.MyCharacter;
 import io.github.rosemoe.sora.widget.schemes.EditorColorScheme;
 import com.tyron.code.language.textmate.EmptyTextMateLanguage;
@@ -299,6 +299,5 @@ public class BaseTextmateAnalyzer extends AsyncIncrementalAnalyzeManager<MyState
     public void onChangeTheme(ThemeModel newTheme) {
         this.theme = newTheme.getTheme();
     }
-
-    public Theme getTheme(){ return this.theme; }
+    public Theme getTheme(){ return this.theme; }     
 }
