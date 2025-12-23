@@ -31,8 +31,7 @@
     <string name="attachment_title">Baixar os anexos recebidos</string>
     <string name="attachment_summary_on">Baixar automaticamente anexos para e-mails recebidos</string>
     <string name="attachment_summary_off">Baixar anexos apenas quando requisitado manualmente</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">Próximo</string>
     <string name="wizard_finish">Concluir</string>
@@ -93,7 +92,6 @@
         <item>@string/settings_theme_value_dark</item>
     </string-array>
     
-
     <!-- Editor settings -->
     <string name="code_engine_title">Motor de Autocompletar</string>
     <string name="settings_code_completions">Ativar o autocompletador de código</string>
@@ -191,7 +189,6 @@
     <string name="project_manager_null_projects">Ops! Você não tem nenhum projeto existente</string>
     <string name="project_manager_suggestions">Sugestões:\n\n  - Criar um novo projeto\n  - Mudar o caminho dos projetos</string>
     
-
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">Compilando</string>
     <string name="compilation_button_install">INSTALAR</string>
