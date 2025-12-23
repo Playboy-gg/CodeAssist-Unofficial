@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">自动下载收到电子邮件的附件
     </string>
     <string name="attachment_summary_off">仅在手动请求时下载附件</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">下一步</string>
     <string name="wizard_finish">完成</string>
@@ -94,7 +93,6 @@
         <item>@string/settings_theme_value_dark</item>
     </string-array>
     
-
     <!-- Editor settings -->
     <string name="code_engine_title">编译器</string>
     <string name="settings_code_completions">代码自动补全</string>
@@ -152,8 +150,7 @@
     <string name="sketchub_team">Sketchub Team</string>
     <string name="community">社区</string>
     <string name="rate_us">评价我们</string>
-
-
+    
     <!-- file manager menu -->
     <string name="error">错误</string>
     <string name="error_resource_name_restriction">资源名必须只包含小写的a-z、0-9或下划线。</string>
@@ -189,7 +186,6 @@
     <string name="project_manager_null_projects">没有发现项目</string>
     <string name="project_manager_suggestions">建议:\n\n  - 创建新项目\n  - 更改项目路径</string>
     
-
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">编译</string>
     <string name="compilation_button_install">安装</string>
@@ -223,4 +219,3 @@
     <string name="tab_ide_logs_title">IDE日志</string>
     <string name="tab_diagnostics_title">诊断</string>
 </resources>
-
