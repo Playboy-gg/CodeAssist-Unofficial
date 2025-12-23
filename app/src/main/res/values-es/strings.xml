@@ -31,8 +31,7 @@
     <string name="attachment_summary_on">Descargar automáticamente archivos adjuntos para correos electrónicos entrantes
     </string>
     <string name="attachment_summary_off">Descargar archivos adjuntos únicamente cuando lo solicite manualmente</string>
-
-
+	
     <!-- wizard -->
     <string name="wizard_next">Siguiente</string>
     <string name="wizard_finish">Finalizar</string>
@@ -189,8 +188,7 @@
     <string name="project_path_menu_title">Ruta de Proyectos</string>
     <string name="project_manager_null_projects">No se encontró ningún proyecto</string>
     <string name="project_manager_suggestions">Sugerencias:\n\n  - Crear nuevo proyecto\n  - Cambiar ruta de proyectos</string>
-    
-
+	
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">Compilando</string>
     <string name="compilation_button_install">INSTALAR</string>
