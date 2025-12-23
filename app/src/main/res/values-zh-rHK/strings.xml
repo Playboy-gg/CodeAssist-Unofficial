@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">自動下載收到電子郵件的附件
     </string>
     <string name="attachment_summary_off">僅在手動請求時下載附件</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">下一步</string>
     <string name="wizard_finish">完成</string>
@@ -94,7 +93,6 @@
         <item>@string/settings_theme_value_dark</item>
     </string-array>
     
-
     <!-- Editor settings -->
     <string name="code_engine_title">編譯器</string>
     <string name="settings_code_completions">代碼自動補全</string>
@@ -152,8 +150,7 @@
     <string name="sketchub_team">Sketchub Team</string>
     <string name="community">社區</string>
     <string name="rate_us">評價我們</string>
-
-
+    
     <!-- file manager menu -->
     <string name="error">錯誤</string>
     <string name="error_resource_name_restriction">資源名必須只包含小寫的a-z、0-9或下劃線。</string>
@@ -189,7 +186,6 @@
     <string name="project_manager_null_projects">沒有發現項目</string>
     <string name="project_manager_suggestions">建議:\n\n  - 創建新項目\n  - 更改項目路徑</string>
     
-
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">編譯</string>
     <string name="compilation_button_install">安裝</string>
