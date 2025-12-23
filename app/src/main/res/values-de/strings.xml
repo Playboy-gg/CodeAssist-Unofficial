@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    
     <string name="app_name">CodeAssist</string>
     <string name="hello_world">Hallo Welt!</string>
     <item name="paste" type="string">Einfügen</item>
@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">Lade Anhänge für eingehende Emails automatisch runter
     </string>
     <string name="attachment_summary_off">Lade Anhänge nur runter, wenn manuell angefordert</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">Nächstes</string>
     <string name="wizard_finish">Beenden</string>
@@ -83,7 +82,6 @@
     <string name="settings_theme_value_light">Hell</string>
     <string name="settings_theme_value_dark">Dunkel</string>
     
-
     <!-- Editor settings -->
     <string name="code_engine_title">Vervollständingungs-Engine</string>
     <string name="settings_code_completions">Code vervollständigen</string>
@@ -171,7 +169,6 @@
     <string name="project_manager_null_projects">Keine Projekte gefunden</string>
     <string name="project_manager_suggestions">Vorschläge:\n\n  - Neues Projekt erstellen\n  - Projektpfad ändern</string>
     
-
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">Am Bauen</string>
     <string name="compilation_button_install">INSTALLIEREN</string>
