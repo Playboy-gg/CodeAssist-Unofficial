@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">Unduh lampiran dari email-email mendatang secara otomatis
     </string>
     <string name="attachment_summary_off">Hanya unduh lampiran ketika diminta secara manual</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">Selanjutnya</string>
     <string name="wizard_finish">Selesai</string>
@@ -74,7 +73,6 @@
     <string name="settings_title_editor">Editor</string>
     <string name="title_activity_settings">Setelan</string>
     
-
     <!-- Editor settings -->
     <string name="code_engine_title">Mesin Penyelesaian</string>
     <string name="settings_code_completions">Nyalakan penyelesaian kode</string>
@@ -123,6 +121,7 @@
     <string name="app_source_title">Sumber kode</string>
     <string name="sketchub_team">Tim Sketchub</string>
     <string name="community">Komunitas</string>
+    
     <!-- file manager menu -->
     <string name="error">Error</string>
     <string name="error_resource_name_restriction">Nama resource hanya boleh berisi huruf kecil a-z, 0-9 atau underscore.</string>
@@ -170,7 +169,6 @@
     <string name="project_manager_null_projects">Tidak ada proyek yang ditemukan</string>
     <string name="project_manager_suggestions">Saran:\n\n  - Buat Proyek Baru\n  - Ganti Jalur Proyek</string>
     
-
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">Sedang melakukan kompilasi</string>
     <string name="compilation_button_install">INSTALL</string>

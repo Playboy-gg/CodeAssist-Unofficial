@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    
     <string name="app_name">CodeAssist</string>
     <string name="hello_world">Hello world!</string>
     <item name="paste" type="string">Вставить</item>
@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">Автоматически загружать вложения для входящих писем
     </string>
     <string name="attachment_summary_off">Загружать вложения только по запросу вручную</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">Далее</string>
     <string name="wizard_finish">Завершить</string>
@@ -70,22 +69,19 @@
     <string name="menu_format">Форматировать код</string>
     <string name="menu_settings">Настройки</string>
 
-<!-- Application settings -->
+    <!-- Application settings -->
     <string name="settings_theme_title">Тема приложения</string>
     <string name="settings_theme_value_default">Системная тема (по умолчанию)</string>
     <string name="settings_theme_value_light">Светлая тема</string>
     <string name="settings_theme_value_dark">Темная тема</string>
-
-
+    
     <!-- preferences -->
     <string name="settings_title_editor">Редактор кода</string>
     <string name="title_activity_settings">Настройки</string>
-        <string name="settings_title_application">Приложение</string>
+    <string name="settings_title_application">Приложение</string>
     <string name="settings_desc_application">Общие настройки приложения</string>
-       <string name="settings_desc_editor">Настройки редактора кода</string>
+    <string name="settings_desc_editor">Настройки редактора кода</string>
     
-
-
     <!-- Editor settings -->
     <string name="code_engine_title">Движок автозавершения</string>
     <string name="settings_code_completions">Автозавершение кода</string>
@@ -97,9 +93,9 @@
     <string name="editor_scheme_title">Цветовая схема редактора</string>
     <string name="editor_scheme_desc">Нажмите, чтобы изменить цветовую схему редактора</string>
     <string name="editor_delete_whitespaces">Автоматическое удаление пробелов</string>
-   <string name="settings_case_insensitive_match_title">Не учитывать регистр</string>
+    <string name="settings_case_insensitive_match_title">Не учитывать регистр</string>
     <string name="settings_case_insensitive_match_desc">Подсказывать имена классов с префиксом в нижнем регистре</string>
- <string name="save">Сохранить</string>
+    <string name="save">Сохранить</string>
     <string name="editor_settings_title">Настройки редактора кода</string>
     <string name="editor_settings_wordwrap">Перенос по словам</string>
     <string name="font_size_title">Размер шрифта</string>
@@ -117,14 +113,13 @@
     <string name="settings_about_us_title">Обратная связь</string>
     <string name="settings_about_us_desc">Информация о разработчиках приложения</string>
     <string name="app_description">Мощная и легкая IDE для разработки приложений Android прямо у вас в кармане.</string>
-    <string name="app_version">Версия %1$s</string>
+    <string name="app_version">Версия</string>
     <string name="contact_group_title">Связь</string>
     <string name="app_source_title">Исходный код</string>
     <string name="sketchub_team">Команда Sketchub</string>
     <string name="community">Сообщество</string>
     <string name="rate_us">Оценить нас</string>
-
-
+    
     <!-- file manager menu -->
     <string name="error">Error</string>
     <string name="error_resource_name_restriction">Имена ресурсов должны содержать только строчные буквы a–z, 0–9 и знаки подчеркивания.</string>
@@ -178,15 +173,14 @@
     <string name="compilation_result_success">Успешная компиляция</string>
     <string name="compilation_result_failed">Сбой компиляции</string>
 
-<!-- File Editor Manager -->
+    <!-- File Editor Manager -->
     <string name="file_editor_selection_title">Выберите редактор кода, через который хотите открыть файл</string>
 
-<!-- Editor tabs -->
+    <!-- Editor tabs -->
     <string name="menu_close_file">Закрыть</string>
     <string name="menu_close_others">Закрыть другое</string>
     <string name="menu_close_all">Закрыть всё</string>
-
-
+    
     <!-- Library manager -->
     <string name="library_manager_title">Библиотек: %1s</string>
     <string name="group_id">Group ID</string>
@@ -195,6 +189,6 @@
     <string name="menu_display_dependencies">Список зависимостей</string>
     <string name="attributes_editor">Редактор атрибутов</string>
     <string name="attribute_value">Значение атрибута</string>
-<string name="menu_add_libs_gradle">Добавить из файла build.gradle</string>
+    <string name="menu_add_libs_gradle">Добавить из файла build.gradle</string>
 
 </resources>

@@ -7,8 +7,7 @@
         app:key="theme"
         app:entryValues="@array/theme_values"
         app:entries="@array/theme_entries"
-        app:iconSpaceReserved="false"
-        />
+        app:iconSpaceReserved="false"/>
          <SwitchPreferenceCompat
             android:defaultValue="false"
             android:iconSpaceReserved="false"

@@ -32,8 +32,7 @@
     <string name="attachment_summary_on">Gelen Epostalar İçin Ekleri Otomatik İndir
     </string>
     <string name="attachment_summary_off">Ekleri Yalnızca Manuel Olarak İstendiğinde İndir</string>
-
-
+    
     <!-- wizard -->
     <string name="wizard_next">Sonraki</string>
     <string name="wizard_finish">Bitir</string>
@@ -73,8 +72,7 @@
     <!-- preferences -->
     <string name="settings_title_editor">Editör</string>
     <string name="title_activity_settings">Ayarlar</string>
-
-
+    
     <!-- Editor settings -->
     <string name="code_engine_title">Tamamlama Motoru</string>
     <string name="settings_code_completions">Kod tamamlamalarını aktif et</string>
@@ -123,6 +121,7 @@
     <string name="app_source_title">Kaynak kodu</string>
     <string name="sketchub_team">Sketchub Takımı</string>
     <string name="community">Topluluk</string>
+    
     <!-- file manager menu -->
     <string name="error">Hata</string>
     <string name="error_resource_name_restriction">Kaynak adları yalnızca küçük harf a–z, 0–9 veya alt çizgi içermelidir.</string>
@@ -168,8 +167,7 @@
     <string name="project_path_menu_title">Proje yolu</string>
     <string name="project_manager_null_projects">Proje Bulunamadı</string>
     <string name="project_manager_suggestions">Öneriler:\n\n  - Yeni Proje Oluştur\n  - Proje Yolunu Değiştir</string>
-
-
+    
     <!-- Compiler Service -->
     <string name="compilation_state_compiling">Derleniyor</string>
     <string name="compilation_button_install">YÜKLE</string>
