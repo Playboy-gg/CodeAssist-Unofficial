@@ -44,7 +44,7 @@ android {
     }
 
     signingConfigs {
-        debug {
+        release {
             storeFile file('codeassist.keystore')
             keyAlias 'codeassist'
             storePassword 'codeassist'
@@ -54,14 +54,13 @@ android {
     
     buildTypes {
         release {
-            signingConfig = signingConfigs.debug
+            signingConfig = signingConfigs.release
             minifyEnabled false
             shrinkResources = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
-            signingConfig =
-signingConfigs.debug
+            signingConfig = signingConfigs.debug
         }
     }
 	
