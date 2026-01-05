@@ -1,8 +1,10 @@
-# ⚠️ Project Discontinued ⚠️
+# ⚠️ Project Discontinued
 
-This repository is no longer maintained. Development has moved to a new repository: [CodeAssist-Pro](https://github.com/Wadamzmail/CodeAssist-Pro)
+>This repository is no longer maintained.
+>Development has moved to a new repository:
+>[CodeAssist-Pro](https://github.com/Wadamzmail/CodeAssist-Pro)
 
-Please visit the new repo for the latest code, releases, and issues.
+>Please visit the new repo for the latest code, releases, and issues.
 
 <p align='center'>
  <img width='300px%' height='300px' src='https://github.com/Wadamzmail/CodeAssist-Unofficial/blob/main/logo-dark.png#gh-dark-mode-only' >
