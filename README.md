@@ -1,6 +1,6 @@
 # ⚠️ Project Discontinued ⚠️
 
-This repository is no longer maintained. Development has moved to a new repository: [DexMerge & Jar2Dex](https://github.com/Wadamzmail/CodeAssist-Pro)
+This repository is no longer maintained. Development has moved to a new repository: [CodeAssist-Pro](https://github.com/Wadamzmail/CodeAssist-Pro)
 
 Please visit the new repo for the latest code, releases, and issues.
 
