@@ -1,0 +1,37 @@
+name: Permanent Package Refactor
+
+on:
+  workflow_dispatch: # Tumi manually run korbe
+
+permissions:
+  contents: write # Repo-te permanent commit korar permission
+
+jobs:
+  refactor:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    # 1. Shob file-er bhetorer text change korbe
+    - name: Replace Package Name Text
+      run: |
+        find . -type f \( -name "*.gradle" -o -name "*.xml" -o -name "*.kt" -o -name "*.java" -o -name "*.pro" \) -exec sed -i 's/org.codeassist.unofficial/org.codeassist.rihad/g' {} +
+
+    # 2. Folder-er nam permanently bodlabe
+    - name: Rename Package Directories
+      run: |
+        find . -type d -path "*/org/codeassist/unofficial" | while read -r dir; do
+          parent=$(dirname "$dir")
+          mv "$dir" "$parent/rihad"
+        done
+
+    # 3. Change gulo permanent bhabe repo-te commit ar push korbe
+    - name: Commit and Push Changes Back to Repo
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add .
+        git commit -m "Permanently refactored package name to org.codeassist.rihad" || echo "No changes to commit"
+        git push
