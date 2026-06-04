@@ -7,12 +7,20 @@ import java.util.Objects;
 
 public class Dependency {
 
+  // ✅ Fixed method to handle version-less dependencies from BOM
   public static Dependency valueOf(String declaration) {
     String[] names = declaration.split(":");
     if (names.length >= 4) {
       return new Dependency(names[0], names[1], names[2], names[3]);
     }
-    return new Dependency(names[0], names[1], names[2]);
+    if (names.length == 3) {
+      return new Dependency(names[0], names[1], names[2]);
+    }
+    if (names.length == 2) {
+      // BOM থেকে version আসবে — এখন empty version দিয়ে রাখো
+      return new Dependency(names[0], names[1], "");
+    }
+    throw new IllegalArgumentException("Invalid dependency: " + declaration);
   }
 
   private String artifactId;
