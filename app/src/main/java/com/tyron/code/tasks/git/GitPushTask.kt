@@ -87,7 +87,6 @@ object GitPushTask {
             Git.open(project.getRootFile())
                 .push()
                 .setProgressMonitor(progress)
-                // ক্র্যাশ এড়ানোর জন্য SSH Callback রিমুভ করা হয়েছে, শুধু CredentialsProvider দেওয়া হলো
                 .setCredentialsProvider(credentialsProvider)
                 .call()
             return@executeAsyncProvideError
