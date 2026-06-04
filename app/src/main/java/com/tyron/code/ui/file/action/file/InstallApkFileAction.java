@@ -12,7 +12,7 @@ import com.tyron.code.util.ApkInstaller;
 import com.tyron.ui.treeview.TreeNode;
 import com.tyron.ui.treeview.TreeView;
 import java.io.File;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class InstallApkFileAction extends FileAction {
 

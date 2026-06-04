@@ -66,7 +66,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.stream.Collectors;
 import javax.tools.Diagnostic;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 import org.jetbrains.kotlin.com.intellij.openapi.util.Key;
 
 public class MainFragment extends Fragment implements ProjectManager.OnProjectOpenListener {

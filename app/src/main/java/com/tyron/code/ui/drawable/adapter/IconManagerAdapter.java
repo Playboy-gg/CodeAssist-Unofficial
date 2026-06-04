@@ -23,7 +23,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class IconManagerAdapter extends RecyclerView.Adapter<IconManagerAdapter.ViewHolder>
     implements Filterable {

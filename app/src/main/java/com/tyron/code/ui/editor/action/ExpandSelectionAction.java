@@ -13,7 +13,7 @@ import com.tyron.common.util.AndroidUtilities;
 import com.tyron.editor.Editor;
 import com.tyron.editor.selection.ExpandSelectionProvider;
 import java.io.File;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class ExpandSelectionAction extends AnAction {
 

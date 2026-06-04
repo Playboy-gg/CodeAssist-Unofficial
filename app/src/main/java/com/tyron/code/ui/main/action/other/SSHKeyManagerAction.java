@@ -13,7 +13,7 @@ import com.tyron.actions.AnActionEvent;
 import com.tyron.actions.CommonDataKeys;
 import com.tyron.actions.Presentation;
 import com.tyron.code.ui.ssh.SshKeyManagerFragment;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class SSHKeyManagerAction extends AnAction {
 

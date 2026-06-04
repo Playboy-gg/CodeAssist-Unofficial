@@ -22,7 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class CreateLayoutAction extends FileAction {
 

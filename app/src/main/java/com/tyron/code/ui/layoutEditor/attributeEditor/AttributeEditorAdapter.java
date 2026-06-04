@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 import kotlin.Pair;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class AttributeEditorAdapter
     extends RecyclerView.Adapter<AttributeEditorAdapter.ViewHolder> {

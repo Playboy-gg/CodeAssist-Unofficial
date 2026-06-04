@@ -53,7 +53,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.logging.Handler;
 import javax.tools.Diagnostic;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class AppLogFragment extends Fragment implements ProjectManager.OnProjectOpenListener {
 

@@ -29,7 +29,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.commons.io.FileUtils;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class CompileAabAction extends AnAction {
 

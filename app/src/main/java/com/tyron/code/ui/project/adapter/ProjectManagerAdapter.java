@@ -18,7 +18,7 @@ import com.tyron.code.ApplicationLoader;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class ProjectManagerAdapter extends RecyclerView.Adapter<ProjectManagerAdapter.ViewHolder> {
 

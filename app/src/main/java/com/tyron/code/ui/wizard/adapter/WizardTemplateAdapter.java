@@ -16,7 +16,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class WizardTemplateAdapter extends RecyclerView.Adapter<WizardTemplateAdapter.ViewHolder> {
 

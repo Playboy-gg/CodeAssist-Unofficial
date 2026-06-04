@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.codeassist.unofficial.R;
+import org.codeassist.rihad.R;
 
 public class CreateKotlinClassAction extends FileAction {
 
