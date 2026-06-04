@@ -55,7 +55,6 @@ object GitPushTask {
             .setPositiveButton("Push") { _, _ ->
                 val username = etUsername.text.toString().trim()
                 val token = etToken.text.toString().trim()
-
                 if (username.isNotEmpty() && token.isNotEmpty()) {
                     prefs.edit()
                         .putString("username", username)
@@ -71,7 +70,8 @@ object GitPushTask {
     }
 
     private fun startPush(project: Project, context: Context, username: String, token: String) {
-        val inflater = LayoutInflater.from(context).context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater = LayoutInflater.from(context)
+            .context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val binding = LayoutDialogProgressBinding.inflate(inflater, null, false)
         binding.message.visibility = View.VISIBLE
 
@@ -87,9 +87,9 @@ object GitPushTask {
             Git.open(project.getRootFile())
                 .push()
                 .setProgressMonitor(progress)
-                .setCredentialsProvider(credentialsProvider) // SSH callback sorano hoyeche
+                // ক্র্যাশ এড়ানোর জন্য SSH Callback রিমুভ করা হয়েছে, শুধু CredentialsProvider দেওয়া হলো
+                .setCredentialsProvider(credentialsProvider)
                 .call()
-
             return@executeAsyncProvideError
         }, { _, _ -> })
 
@@ -98,7 +98,6 @@ object GitPushTask {
         future.whenComplete { result, error ->
             ThreadUtils.runOnUiThread {
                 dialog?.dismiss()
-
                 if (result == null || error != null) {
                     ErrorOutput.ShowError(error, context)
                 } else {
