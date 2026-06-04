@@ -367,51 +367,35 @@ public class CodeEditorView extends CodeEditor implements Editor {
     getText().endBatchEdit();
   }
 
-/*  public boolean isFormatting() {
-    try {
-      //return sFormatThreadField.get(this) != null;
-    } catch (IllegalAccessException e) {
-      return false;
-    }
-  }
-  */
-
   @Override
   public synchronized boolean formatCodeAsync() {
     return CodeEditorView.super.formatCodeAsync();
   }
 
- @Override
+  // ✅ Fixed method to prevent infinite loop (StackOverflowError)
+  @Override
   public synchronized boolean formatCodeAsync(int start, int end) {
-   /* if (isFormatting()) {
-      return false;
-    }*/
-    return formatCodeAsync(getText().getIndexer().getCharPosition(start),getText().getIndexer().getCharPosition(end));
-   // if(true) return false;
-   /* if (getEditorLanguage() instanceof EditorFormatter
-        && getText() != null
-        && getEditorLanguage() != null) {
-      ProgressManager.getInstance()
-          .runNonCancelableAsync(
-              () -> {
-                CharSequence originalText = getText();
-                if (originalText != null) {
-                  final CharSequence formatted =
-                      ((EditorFormatter) getEditorLanguage()).format(originalText, start, end);
-                  if (formatted != null) {
-                    TextRange tRange = new TextRange(getText().getIndexer().getCharPosition(start),
-                                                     getText().getIndexer().getCharPosition(end));
-                    super.onFormatSucceed(formatted, tRange);
-                  } else {
-                    // Handle null formatted text
-                  }
-                } else {
-                  // Handle null original text
-                }
-              });
-      return true;
+    io.github.rosemoe.sora.text.Content content = getText();
+    if (content == null) {
+        return false;
     }
-    return false;*/
+    
+    int textLength = content.length();
+    int safeStart = Math.max(0, Math.min(start, textLength));
+    int safeEnd = Math.max(safeStart, Math.min(end, textLength));
+    
+    if (safeStart >= safeEnd) {
+        return false;
+    }
+    
+    try {
+        return super.formatCodeAsync(
+            content.getIndexer().getCharPosition(safeStart),
+            content.getIndexer().getCharPosition(safeEnd)
+        );
+    } catch (IndexOutOfBoundsException e) {
+        return false;
+    }
   }
 
   @Override
@@ -475,14 +459,15 @@ public class CodeEditorView extends CodeEditor implements Editor {
   protected void onDraw(Canvas canvas) {
     super.onDraw(canvas);
   }
+  
   @Override 
- public void moveSelectionRight(){}
+  public void moveSelectionRight(){}
   @Override 
-public  void moveSelectionUp(){} 
+  public  void moveSelectionUp(){} 
   @Override 
-public  void moveSelectionDown(){}
+  public  void moveSelectionDown(){}
   @Override 
-public  void moveSelectionLeft(){}
+  public  void moveSelectionLeft(){}
 
   private void drawSquigglyLine(Canvas canvas, float startX, float startY, float endX, float endY) {
     float waveSize = getDpUnit() * 3;
@@ -507,9 +492,7 @@ public  void moveSelectionLeft(){}
     }
   }
 
-
   private void convDiagnostics(List<? extends Diagnostic<?>> diagnostics) {
-
     Function<Diagnostic.Kind, Short> severitySupplier = it -> {
         switch (it) {
             case ERROR:
@@ -537,6 +520,4 @@ public  void moveSelectionLeft(){}
     // أرسلها للـ editor
      setDiagnostics(container);
   }
-
-  
 }
