@@ -22,7 +22,7 @@ public class Dependency {
   private String type;
   private String natives;
   private boolean isNatives = false;
-
+  private boolean isPlatform = false;
   private final List<Dependency> excludes = new ArrayList<>(1);
 
   public Dependency() {}
@@ -37,6 +37,7 @@ public class Dependency {
       this.isNatives = true;
     }
     this.type = copy.type;
+    this.isPlatform = copy.isPlatform;
     this.excludes.addAll(copy.getExcludes());
   }
 
@@ -54,8 +55,20 @@ public class Dependency {
     this.isNatives = true;
   }
 
+  public boolean isPlatform() {
+    return isPlatform;
+  }
+
+  public void setPlatform(boolean platform) {
+    isPlatform = platform;
+  }
+
   public String getArtifactId() {
     return artifactId;
+  }
+
+  public void setArtifactId(String artifactId) {
+    this.artifactId = artifactId;
   }
 
   public boolean isNatives() {
@@ -68,10 +81,6 @@ public class Dependency {
 
   public void setNatives(String natives) {
     this.natives = natives;
-  }
-
-  public void setArtifactId(String artifactId) {
-    this.artifactId = artifactId;
   }
 
   public String getGroupId() {
@@ -90,7 +99,6 @@ public class Dependency {
     if (temp.contains(",")) {
       String[] versions = temp.split(",");
       for (String version : versions) {
-        // return the first version for now.
         if (!version.isEmpty()) {
           return version;
         }
@@ -134,6 +142,10 @@ public class Dependency {
 
   public void addExclude(Dependency dependency) {
     excludes.add(dependency);
+  }
+
+  public void addExcludes(List<Dependency> deps) {
+    excludes.addAll(deps);
   }
 
   @Override
