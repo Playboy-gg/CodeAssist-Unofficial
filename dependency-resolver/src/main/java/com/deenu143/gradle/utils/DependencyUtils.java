@@ -15,18 +15,39 @@ import org.apache.commons.io.FileUtils;
 
 public class DependencyUtils {
 
-  // parseDependencies
+  private static final Pattern PLATFORM_PATTERN =
+      Pattern.compile(
+          "\\s*(?:implementation|api|compileOnly|runtimeOnly)\\s+platform\\s*\\([\"']([^'\"]+)[\"']\\)");
+
   public static List<Dependency> parseDependencies(
       RepositoryManager repositoryManager, String readString, ILogger logger, ScopeType scopeType)
       throws IOException {
+
     final Pattern DEPENDENCIES =
         Pattern.compile(
             "\\s*(" + scopeType.getStringValue() + ")\\s*([\"'])([a-zA-Z0-9.'/-:\\-]+)\\2");
     final Pattern DEPENDENCIES_QUOTE =
-        Pattern.compile("\\s*(" + scopeType.getStringValue() + ")\\s*\\([\"']([^'\"]+)[\"']\\)");
+        Pattern.compile(
+            "\\s*(" + scopeType.getStringValue() + ")\\s*\\([\"']([^'\"]+)[\"']\\)");
 
     readString = readString.replaceAll("\\s*//.*", "");
     List<Dependency> dependencies = new ArrayList<>();
+
+    // BOM platform() dependencies
+    Matcher platformMatcher = PLATFORM_PATTERN.matcher(readString);
+    while (platformMatcher.find()) {
+      String declaration = platformMatcher.group(1);
+      if (declaration != null) {
+        try {
+          Dependency dep = Dependency.valueOf(declaration);
+          dep.setPlatform(true);
+          dependencies.add(dep);
+        } catch (Exception e) {
+          logger.warning("Failed to add BOM dependency: " + declaration);
+        }
+      }
+    }
+
     Matcher matcher = DEPENDENCIES.matcher(readString);
     while (matcher.find()) {
       String declaration = matcher.group(3);
