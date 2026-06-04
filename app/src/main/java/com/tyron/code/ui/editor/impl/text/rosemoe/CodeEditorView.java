@@ -367,35 +367,18 @@ public class CodeEditorView extends CodeEditor implements Editor {
     getText().endBatchEdit();
   }
 
+  // ✅ Disabled to prevent Sora Editor internal crash on paste
   @Override
   public synchronized boolean formatCodeAsync() {
-    return CodeEditorView.super.formatCodeAsync();
+    // Disabled — Sora library bug causes IndexOutOfBoundsException
+    // in BlockIntList.removeRange after paste operations
+    return false;
   }
 
-  // ✅ Fixed method to prevent infinite loop (StackOverflowError)
+  // ✅ Disabled for the same reason
   @Override
   public synchronized boolean formatCodeAsync(int start, int end) {
-    io.github.rosemoe.sora.text.Content content = getText();
-    if (content == null) {
-        return false;
-    }
-    
-    int textLength = content.length();
-    int safeStart = Math.max(0, Math.min(start, textLength));
-    int safeEnd = Math.max(safeStart, Math.min(end, textLength));
-    
-    if (safeStart >= safeEnd) {
-        return false;
-    }
-    
-    try {
-        return super.formatCodeAsync(
-            content.getIndexer().getCharPosition(safeStart),
-            content.getIndexer().getCharPosition(safeEnd)
-        );
-    } catch (IndexOutOfBoundsException e) {
-        return false;
-    }
+    return false;
   }
 
   @Override
