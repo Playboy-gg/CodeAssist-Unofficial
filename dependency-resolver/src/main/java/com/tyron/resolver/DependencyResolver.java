@@ -14,7 +14,6 @@ public class DependencyResolver {
 
   private final RepositoryManager repository;
   private final Map<Pom, String> resolvedPoms;
-
   private ResolveListener mListener;
 
   public DependencyResolver(RepositoryManager repository) {
@@ -28,17 +27,55 @@ public class DependencyResolver {
 
   public interface ResolveListener {
     void onResolve(String message);
-
     void onFailure(String message);
   }
 
   public List<Pom> resolveDependencies(List<Dependency> declaredDependencies) {
+    // Step 1: BOM থেকে version map বানাও
+    Map<String, String> bomVersionMap = new HashMap<>();
+    List<Dependency> regularDeps = new ArrayList<>();
+
+    for (Dependency dep : declaredDependencies) {
+      if (dep.isPlatform()) {
+        if (mListener != null) {
+          mListener.onResolve("Resolving BOM: " + dep);
+        }
+        Pom bomPom = repository.getPom(dep.toString());
+        if (bomPom != null) {
+          for (Dependency managed : bomPom.getManagedDependencies()) {
+            String key = managed.getGroupId() + ":" + managed.getArtifactId();
+            bomVersionMap.put(key, managed.getVersionName());
+          }
+        } else {
+          if (mListener != null) {
+            mListener.onFailure("Unable to retrieve BOM: " + dep);
+          }
+        }
+      } else {
+        regularDeps.add(dep);
+      }
+    }
+
+    // Step 2: Version নেই এমন deps এ BOM থেকে version দাও
+    for (Dependency dep : regularDeps) {
+      if (TextUtils.isEmpty(dep.getVersionName())) {
+        String key = dep.getGroupId() + ":" + dep.getArtifactId();
+        String version = bomVersionMap.get(key);
+        if (version != null) {
+          dep.setVersionName(version);
+          if (mListener != null) {
+            mListener.onResolve("Version from BOM: " + dep + " -> " + version);
+          }
+        }
+      }
+    }
+
+    // Step 3: Normal resolution
     List<Pom> poms = new ArrayList<>();
-    for (Dependency dependency : declaredDependencies) {
+    for (Dependency dependency : regularDeps) {
       if (mListener != null) {
         mListener.onResolve("Getting POM: " + dependency);
       }
-
       Pom pom = repository.getPom(dependency.toString());
       if (pom != null) {
         pom.setExcludes(dependency.getExcludes());
@@ -48,7 +85,6 @@ public class DependencyResolver {
           pom.setNatives(dependency.getNatives());
         }
         poms.add(pom);
-
       } else {
         if (mListener != null) {
           mListener.onFailure("Unable to retrieve POM of " + dependency);
@@ -58,10 +94,6 @@ public class DependencyResolver {
     return resolve(poms);
   }
 
-  /**
-   * Resolve the list of given dependencies, prioritizing the latest versions of the conflicting
-   * libraries
-   */
   public List<Pom> resolve(List<Pom> declaredDependencies) {
     for (Pom pom : declaredDependencies) {
       resolve(pom);
@@ -77,14 +109,9 @@ public class DependencyResolver {
         String resolvedVersion = resolvedPoms.get(pom);
         String thisVersion = pom.getVersionName();
         int result = getHigherVersion(resolvedVersion, thisVersion);
-        if (result == 0) {
-          return;
-        }
-        if (result > 0) {
-          return;
-        } else {
-          resolvedPoms.remove(pom);
-        }
+        if (result == 0) return;
+        if (result > 0) return;
+        else resolvedPoms.remove(pom);
       }
     }
 
@@ -95,41 +122,20 @@ public class DependencyResolver {
     List<Dependency> excludes = pom.getExcludes();
 
     for (Dependency dependency : pom.getDependencies()) {
-      if ("test".equals(dependency.getScope())) {
-        continue;
-      }
+      if ("test".equals(dependency.getScope())) continue;
 
-      boolean excluded =
-          excludes.stream()
-              .filter(Objects::nonNull)
-              .anyMatch(
-                  ex -> {
-                    if (ex == null) {
-                      return false;
-                    }
-                    if (ex.getGroupId() == null) {
-                      return false;
-                    }
-                    if (!ex.getGroupId().equals(dependency.getGroupId())) {
-                      return false;
-                    }
+      boolean excluded = excludes.stream()
+          .filter(Objects::nonNull)
+          .anyMatch(ex -> {
+            if (ex == null || ex.getGroupId() == null) return false;
+            if (!ex.getGroupId().equals(dependency.getGroupId())) return false;
+            if (ex.getArtifactId() == null) return false;
+            if (!ex.getArtifactId().equals(dependency.getArtifactId())) return false;
+            if (TextUtils.isEmpty(ex.getVersionName())) return true;
+            return ex.getVersionName().equals(dependency.getVersionName());
+          });
 
-                    if (ex.getArtifactId() == null) {
-                      return false;
-                    }
-
-                    if (!ex.getArtifactId().equals(dependency.getArtifactId())) {
-                      return false;
-                    }
-                    if (TextUtils.isEmpty(ex.getVersionName())) {
-                      return true;
-                    }
-                    return ex.getVersionName().equals(dependency.getVersionName());
-                  });
-
-      if (excluded) {
-        continue;
-      }
+      if (excluded) continue;
 
       Pom resolvedPom = repository.getPom(dependency.toString());
       if (resolvedPom == null) {
@@ -147,8 +153,8 @@ public class DependencyResolver {
   }
 
   private int getHigherVersion(String firstVersion, String secondVersion) {
-    ComparableVersion firstComparableVersion = new ComparableVersion(firstVersion);
-    ComparableVersion secondComparableVersion = new ComparableVersion(secondVersion);
-    return firstComparableVersion.compareTo(secondComparableVersion);
+    ComparableVersion first = new ComparableVersion(firstVersion);
+    ComparableVersion second = new ComparableVersion(secondVersion);
+    return first.compareTo(second);
   }
 }
