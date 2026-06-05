@@ -1,4 +1,4 @@
-Name: Rename Android Package
+name: Rename Android Package
 
 on:
   workflow_dispatch:
