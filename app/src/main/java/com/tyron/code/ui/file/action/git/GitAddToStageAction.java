@@ -13,7 +13,7 @@ import com.tyron.code.ui.file.tree.model.TreeFile;
 import com.tyron.ui.treeview.TreeNode;
 import com.tyron.ui.treeview.TreeView;
 import java.io.File;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class GitAddToStageAction extends FileAction {
 

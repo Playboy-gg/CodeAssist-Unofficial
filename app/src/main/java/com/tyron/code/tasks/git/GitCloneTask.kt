@@ -4,9 +4,9 @@ import android.os.Build
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
-import org.codeassist.rihad.R
-import org.codeassist.rihad.databinding.BaseTextinputLayoutBinding
-import org.codeassist.rihad.databinding.LayoutDialogProgressBinding
+import dev.ankit.codeassist.R
+import dev.ankit.codeassist.databinding.BaseTextinputLayoutBinding
+import dev.ankit.codeassist.databinding.LayoutDialogProgressBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import android.os.Environment
 import java.io.File

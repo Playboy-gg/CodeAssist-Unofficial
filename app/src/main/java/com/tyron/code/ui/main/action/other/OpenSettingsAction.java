@@ -8,7 +8,7 @@ import com.tyron.actions.AnAction;
 import com.tyron.actions.AnActionEvent;
 import com.tyron.actions.CommonDataKeys;
 import com.tyron.code.ui.settings.SettingsActivity;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class OpenSettingsAction extends AnAction {
 

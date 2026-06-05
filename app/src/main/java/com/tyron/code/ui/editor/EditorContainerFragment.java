@@ -42,7 +42,7 @@ import com.tyron.fileeditor.api.FileEditorManager;
 import java.io.File;
 import java.util.List;
 import java.util.Objects;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class EditorContainerFragment extends Fragment
     implements FileListener,

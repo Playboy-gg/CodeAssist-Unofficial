@@ -11,8 +11,8 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.text.InputType
 import android.widget.Toast
-import org.codeassist.rihad.R
-import org.codeassist.rihad.databinding.LayoutDialogProgressBinding
+import dev.ankit.codeassist.R
+import dev.ankit.codeassist.databinding.LayoutDialogProgressBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.blankj.utilcode.util.ThreadUtils
 import com.tyron.code.util.executeAsyncProvideError

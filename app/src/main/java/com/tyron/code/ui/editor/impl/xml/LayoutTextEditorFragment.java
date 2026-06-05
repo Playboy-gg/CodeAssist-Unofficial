@@ -13,7 +13,7 @@ import com.tyron.code.ui.editor.impl.text.rosemoe.CodeEditorFragment;
 import com.tyron.code.ui.layoutEditor.LayoutEditorFragment;
 import com.tyron.code.util.ProjectUtils;
 import java.io.File;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 /** A {@link CodeEditorFragment} that supports editing layout files */
 public class LayoutTextEditorFragment extends CodeEditorFragment {

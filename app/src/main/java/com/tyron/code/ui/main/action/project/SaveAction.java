@@ -26,7 +26,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.apache.commons.io.FileUtils;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class SaveAction extends AnAction {
 

@@ -48,7 +48,7 @@ import org.eclipse.lemminx.dom.DOMDocument;
 import org.eclipse.lemminx.dom.DOMNode;
 import org.eclipse.lemminx.dom.DOMParser;
 import org.jetbrains.kotlin.com.intellij.util.ReflectionUtil;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 //import io.github.rosemoe.sora.text.CharPosition;
 import io.github.rosemoe.sora.text.TextRange;
 import java.util.Objects;

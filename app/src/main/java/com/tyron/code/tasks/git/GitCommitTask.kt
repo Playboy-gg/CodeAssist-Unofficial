@@ -6,9 +6,9 @@ import com.tyron.code.tasks.git.ErrorOutput
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
-import org.codeassist.rihad.R
+import dev.ankit.codeassist.R
 import java.io.File
-import org.codeassist.rihad.databinding.BaseTextinputLayoutBinding
+import dev.ankit.codeassist.databinding.BaseTextinputLayoutBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.blankj.utilcode.util.ThreadUtils
 import com.tyron.code.util.executeAsyncProvideError

@@ -54,7 +54,7 @@ import javax.tools.Diagnostic;
 import javax.tools.JavaFileObject;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
-import org.codeassist.rihad.BuildConfig;
+import dev.ankit.codeassist.BuildConfig;
 import java.lang.reflect.Method;
 import javax.tools.JavaCompiler.CompilationTask;
 import dev.mutwakil.javac.JavacTreesUtil;

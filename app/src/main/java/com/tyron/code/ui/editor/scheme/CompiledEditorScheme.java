@@ -9,7 +9,7 @@ import com.google.android.material.color.MaterialColors;
 import com.google.common.collect.ImmutableMap;
 import io.github.rosemoe.sora.widget.schemes.EditorColorScheme;
 import java.util.Map;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 /** An editor color scheme that is based on compiled xml files. */
 public class CompiledEditorScheme extends EditorColorScheme {

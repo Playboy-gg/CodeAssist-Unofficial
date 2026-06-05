@@ -17,7 +17,7 @@ import com.tyron.builder.log.ILogger;
 import com.tyron.builder.project.Project;
 import com.tyron.code.ui.project.ProjectManager;
 import java.lang.ref.WeakReference;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class IndexService extends Service {
 

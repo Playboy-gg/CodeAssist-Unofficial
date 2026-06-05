@@ -8,7 +8,7 @@ import com.tyron.actions.CommonDataKeys;
 import com.tyron.code.ui.main.MainFragment;
 import com.tyron.code.ui.main.MainViewModel;
 import com.tyron.fileeditor.api.FileEditor;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class CloseFileEditorAction extends AnAction {
 

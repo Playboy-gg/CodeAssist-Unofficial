@@ -8,7 +8,7 @@ import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
-import org.codeassist.rihad.R
+import dev.ankit.codeassist.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.blankj.utilcode.util.ThreadUtils
 import com.tyron.code.util.executeAsyncProvideError

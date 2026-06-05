@@ -8,7 +8,7 @@ import android.os.Build;
 import android.util.Log;
 import androidx.core.content.FileProvider;
 import java.io.File;
-import org.codeassist.rihad.BuildConfig;
+import dev.ankit.codeassist.BuildConfig;
 
 public class ApkInstaller {
 

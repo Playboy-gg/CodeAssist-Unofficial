@@ -31,7 +31,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Executors;
 import org.apache.commons.io.FileUtils;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class DrawableManagerFragment extends Fragment {
 

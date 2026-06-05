@@ -7,7 +7,7 @@ import com.blankj.utilcode.util.ThreadUtils
 import com.tyron.code.util.executeAsyncProvideError
 import android.widget.Toast
 import com.tyron.code.ApplicationLoader
-import org.codeassist.rihad.R
+import dev.ankit.codeassist.R
 import com.tyron.code.tasks.git.ErrorOutput
 import android.content.Context
 

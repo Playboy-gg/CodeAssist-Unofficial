@@ -80,7 +80,7 @@ import java.util.Optional;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
 import org.apache.commons.io.FileUtils;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 import java.lang.reflect.Field;
 import org.eclipse.tm4e.core.internal.theme.Theme;
 import io.github.rosemoe.sora.langs.textmate.registry.model.ThemeModel;

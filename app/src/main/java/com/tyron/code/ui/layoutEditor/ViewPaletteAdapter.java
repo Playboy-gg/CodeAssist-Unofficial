@@ -16,7 +16,7 @@ import com.tyron.code.ui.layoutEditor.model.ViewPalette;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class ViewPaletteAdapter extends RecyclerView.Adapter<ViewPaletteAdapter.ViewHolder> {
 

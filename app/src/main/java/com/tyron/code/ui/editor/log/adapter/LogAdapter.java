@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import javax.tools.Diagnostic;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class LogAdapter extends RecyclerView.Adapter<LogAdapter.ViewHolder> {
 

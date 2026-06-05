@@ -58,7 +58,7 @@ import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import kotlin.Pair;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class LayoutEditorFragment extends Fragment implements ProjectManager.OnProjectOpenListener {
 

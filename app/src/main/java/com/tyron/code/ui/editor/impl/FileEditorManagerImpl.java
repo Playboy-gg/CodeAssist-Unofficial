@@ -11,7 +11,7 @@ import com.tyron.fileeditor.api.FileEditorProvider;
 import java.io.File;
 import java.util.Arrays;
 import java.util.function.Consumer;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class FileEditorManagerImpl extends FileEditorManager {
 

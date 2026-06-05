@@ -14,8 +14,8 @@ import com.google.android.material.transition.platform.MaterialSharedAxis
 import net.lingala.zip4j.ZipFile
 import net.lingala.zip4j.progress.ProgressMonitor
 import org.apache.commons.io.FileUtils
-import org.codeassist.rihad.R
-import org.codeassist.rihad.databinding.FragmentProgressSheetDialogBinding
+import dev.ankit.codeassist.R
+import dev.ankit.codeassist.databinding.FragmentProgressSheetDialogBinding
 import com.tyron.code.util.TaskExecutor.executeAsyncProvideError
 import java.io.File
 import java.io.InputStream

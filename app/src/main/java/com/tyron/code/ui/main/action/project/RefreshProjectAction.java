@@ -11,7 +11,7 @@ import com.tyron.code.ui.main.IndexCallback;
 import com.tyron.code.ui.main.MainFragment;
 import com.tyron.code.ui.main.MainViewModel;
 import com.tyron.code.ui.project.ProjectManager;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class RefreshProjectAction extends AnAction {
 

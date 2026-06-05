@@ -24,7 +24,7 @@ import com.tyron.completion.xml.task.InjectResourcesTask;
 import com.tyron.ui.treeview.TreeNode;
 import java.io.File;
 import java.io.IOException;
-import org.codeassist.rihad.R;
+import dev.ankit.codeassist.R;
 
 public class CreateFileAction extends FileAction {
 
